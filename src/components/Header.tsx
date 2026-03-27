@@ -1,4 +1,8 @@
+"use client";
+
 import { Building2, Search, Bell, User, Menu, Moon, Sun, ChevronDown } from 'lucide-react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 interface HeaderProps {
   currentView: 'home' | 'dashboard';
@@ -8,28 +12,26 @@ interface HeaderProps {
 }
 
 export default function Header({ currentView, setCurrentView, theme, toggleTheme }: HeaderProps) {
+  const router = useRouter();
+
   return (
     <header className="fixed top-0 w-full bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 z-50 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div 
-            className="flex items-center cursor-pointer"
-            onClick={() => setCurrentView('home')}
-          >
+          <Link href="/" className="flex items-center cursor-pointer">
             <Building2 className="h-8 w-8 text-blue-600 dark:text-blue-400" />
-            <span className="ml-2 text-xl font-bold text-gray-900 dark:text-white">Architect System</span>
-          </div>
+            <span className="ml-2 text-xl font-bold text-gray-900 dark:text-white">EstateLink</span>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a 
-              href="#" 
+            <Link 
+              href="/" 
               className={`text-sm font-medium ${currentView === 'home' ? 'text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400' : 'text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'}`}
-              onClick={(e) => { e.preventDefault(); setCurrentView('home'); }}
             >
               Home
-            </a>
+            </Link>
             <a href="#" className="text-sm font-medium text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white flex items-center">
               Products <ChevronDown className="ml-1 h-4 w-4" />
             </a>
@@ -56,7 +58,7 @@ export default function Header({ currentView, setCurrentView, theme, toggleTheme
                   Get Started
                 </button>
                 <button 
-                  onClick={() => setCurrentView('dashboard')}
+                  onClick={() => router.push('/dashboard')}
                   className="p-2 text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full"
                 >
                   <User className="h-5 w-5" />
@@ -67,7 +69,7 @@ export default function Header({ currentView, setCurrentView, theme, toggleTheme
                 <button className="p-2 text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full">
                   <Bell className="h-5 w-5" />
                 </button>
-                <div className="flex items-center space-x-2 cursor-pointer" onClick={() => setCurrentView('home')}>
+                <div className="flex items-center space-x-2 cursor-pointer" onClick={() => router.push('/')}>
                   <img 
                     src="https://i.pravatar.cc/150?u=sarah" 
                     alt="User" 

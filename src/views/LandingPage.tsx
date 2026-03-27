@@ -1,6 +1,26 @@
+"use client";
+
+import { useState, useEffect } from 'react';
 import { Search, ChevronDown, Home, Users, Briefcase, Star, TrendingUp, ArrowRight, CheckCircle2, PlusSquare } from 'lucide-react';
+import { getProperties, getProfessionals } from '../app/actions';
 
 export default function LandingPage() {
+  const [properties, setProperties] = useState<any[]>([]);
+  const [professionals, setProfessionals] = useState<any[]>([]);
+
+  useEffect(() => {
+    async function loadData() {
+      try {
+        const props = await getProperties();
+        const profs = await getProfessionals();
+        if (props.length > 0) setProperties(props);
+        if (profs.length > 0) setProfessionals(profs);
+      } catch (e) {
+        console.error(e);
+      }
+    }
+    loadData();
+  }, []);
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -49,14 +69,14 @@ export default function LandingPage() {
 
           {/* Quick Actions */}
           <div className="flex flex-wrap justify-center gap-4 mt-6">
-            <button className="bg-white text-gray-900 px-6 py-2.5 rounded-md font-medium flex items-center shadow-sm hover:bg-gray-50 transition-all text-sm">
-              <Home className="h-4 w-4 mr-2 text-gray-700" /> List Your Property
+            <button className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-6 py-2.5 rounded-md font-medium flex items-center shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-all text-sm">
+              <Home className="h-4 w-4 mr-2 text-gray-700 dark:text-gray-300" /> List Your Property
             </button>
-            <button className="bg-white text-gray-900 px-6 py-2.5 rounded-md font-medium flex items-center shadow-sm hover:bg-gray-50 transition-all text-sm">
-              <Users className="h-4 w-4 mr-2 text-gray-700" /> Hire a Professional
+            <button className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-6 py-2.5 rounded-md font-medium flex items-center shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-all text-sm">
+              <Users className="h-4 w-4 mr-2 text-gray-700 dark:text-gray-300" /> Hire a Professional
             </button>
-            <button className="bg-white text-gray-900 px-6 py-2.5 rounded-md font-medium flex items-center shadow-sm hover:bg-gray-50 transition-all text-sm">
-              <Briefcase className="h-4 w-4 mr-2 text-gray-700" /> Post a Job
+            <button className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-6 py-2.5 rounded-md font-medium flex items-center shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-all text-sm">
+              <Briefcase className="h-4 w-4 mr-2 text-gray-700 dark:text-gray-300" /> Post a Job
             </button>
           </div>
         </div>
@@ -75,7 +95,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Listing 1 */}
             <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
-              <div className="h-48 bg-gray-200 relative">
+              <div className="h-48 bg-gray-200 dark:bg-gray-700 relative">
                 <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Villa" className="w-full h-full object-cover" />
               </div>
               <div className="p-5">
@@ -91,7 +111,7 @@ export default function LandingPage() {
             
             {/* Listing 2 */}
             <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
-              <div className="h-48 bg-gray-200 relative">
+              <div className="h-48 bg-gray-200 dark:bg-gray-700 relative">
                 <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Apartment" className="w-full h-full object-cover" />
               </div>
               <div className="p-5">
@@ -107,7 +127,7 @@ export default function LandingPage() {
 
             {/* Listing 3 */}
             <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
-              <div className="h-48 bg-gray-200 relative">
+              <div className="h-48 bg-gray-200 dark:bg-gray-700 relative">
                 <img src="https://images.unsplash.com/photo-1613490900233-141c5560d75d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="House" className="w-full h-full object-cover" />
               </div>
               <div className="p-5">
