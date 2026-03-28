@@ -41,13 +41,13 @@ export default function Dashboard({ onNavigateHome }: { onNavigateHome?: () => v
     <div className="flex h-screen overflow-hidden bg-[#f4f7fe] dark:bg-gray-900 font-sans transition-colors duration-200">
       
       {/* Sidebar */}
-      <aside className="w-64 bg-[#1e3a5f] text-white flex flex-col relative overflow-hidden shrink-0">
+      <aside className="w-64 bg-[#1e3a5f] dark:bg-gray-800 text-white flex flex-col relative overflow-hidden shrink-0 border-r border-transparent dark:border-gray-700 transition-colors duration-200">
         {/* Logo */}
         <div className="p-6 flex items-center cursor-pointer z-10" onClick={onNavigateHome}>
           <div className="bg-white/20 p-1.5 rounded-lg mr-3">
             <Building className="h-6 w-6 text-white" />
           </div>
-          <span className="text-xl font-bold tracking-wide">EstateLink</span>
+          <span className="text-xl font-bold tracking-wide">Architect System</span>
         </div>
 
         {/* Navigation */}
@@ -129,8 +129,8 @@ export default function Dashboard({ onNavigateHome }: { onNavigateHome?: () => v
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               {/* Active Deals */}
               <div className="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-700 flex items-center transition-colors duration-200">
-                <div className="bg-[#2c4c7c] p-3 rounded-lg mr-4">
-                  <Home className="h-6 w-6 text-white" />
+                <div className="bg-[#2c4c7c] dark:bg-blue-900/50 p-3 rounded-lg mr-4">
+                  <Home className="h-6 w-6 text-white dark:text-blue-400" />
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 dark:text-gray-400 font-medium mb-1">Active Deals</p>
@@ -179,7 +179,7 @@ export default function Dashboard({ onNavigateHome }: { onNavigateHome?: () => v
                   </div>
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Notifications</span>
                 </div>
-                <ChevronDown className="h-4 w-4 text-gray-400" />
+                <ChevronDown className="h-4 w-4 text-gray-400 dark:text-gray-500" />
               </div>
             </div>
 
@@ -200,7 +200,7 @@ export default function Dashboard({ onNavigateHome }: { onNavigateHome?: () => v
                         <h3 className="font-bold text-[#1e3a5f] dark:text-white text-sm mb-3">{project.title}</h3>
                         <div className="flex justify-between items-center">
                           <span className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs px-2 py-1 rounded font-semibold">{project.progress}% <span className="font-normal text-gray-600 dark:text-gray-400 ml-1">Complete</span></span>
-                          <ChevronRight className="h-4 w-4 text-gray-400" />
+                          <ChevronRight className="h-4 w-4 text-gray-400 dark:text-gray-500" />
                         </div>
                       </div>
                     </div>
@@ -215,7 +215,7 @@ export default function Dashboard({ onNavigateHome }: { onNavigateHome?: () => v
                           <h3 className="font-bold text-[#1e3a5f] dark:text-white text-sm mb-3">Greenwood Tower</h3>
                           <div className="flex justify-between items-center">
                             <span className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs px-2 py-1 rounded font-semibold">70% <span className="font-normal text-gray-600 dark:text-gray-400 ml-1">Complete</span></span>
-                            <ChevronRight className="h-4 w-4 text-gray-400" />
+                            <ChevronRight className="h-4 w-4 text-gray-400 dark:text-gray-500" />
                           </div>
                         </div>
                       </div>
@@ -229,7 +229,7 @@ export default function Dashboard({ onNavigateHome }: { onNavigateHome?: () => v
                           <h3 className="font-bold text-[#1e3a5f] dark:text-white text-sm mb-3">Riverside Complex</h3>
                           <div className="flex justify-between items-center">
                             <span className="bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 text-xs px-2 py-1 rounded font-semibold">2/6 <span className="font-normal text-gray-600 dark:text-gray-400 ml-1">Upcoming Meeting</span></span>
-                            <ChevronRight className="h-4 w-4 text-gray-400" />
+                            <ChevronRight className="h-4 w-4 text-gray-400 dark:text-gray-500" />
                           </div>
                         </div>
                       </div>
@@ -243,7 +243,7 @@ export default function Dashboard({ onNavigateHome }: { onNavigateHome?: () => v
               <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col transition-colors duration-200">
                 <div className="flex justify-between items-center mb-6">
                   <h2 className="text-lg font-bold text-[#1e3a5f] dark:text-white">Analytics Overview</h2>
-                  <MoreHorizontal className="h-5 w-5 text-gray-400" />
+                  <MoreHorizontal className="h-5 w-5 text-gray-400 dark:text-gray-500" />
                 </div>
                 
                 <div className="flex justify-between items-end mb-6">
@@ -279,7 +279,7 @@ export default function Dashboard({ onNavigateHome }: { onNavigateHome?: () => v
                         </div>
                       </div>
                       <span className="font-bold text-[#1e3a5f] dark:text-white flex items-center">
-                        Recent <ChevronDown className="h-4 w-4 ml-1 text-gray-400" />
+                        Recent <ChevronDown className="h-4 w-4 ml-1 text-gray-400 dark:text-gray-500" />
                       </span>
                     </div>
                     <div className="flex space-x-1">
@@ -320,13 +320,13 @@ export default function Dashboard({ onNavigateHome }: { onNavigateHome?: () => v
 
                 {/* Action Buttons */}
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-700 flex space-x-4 transition-colors duration-200">
-                  <button className="flex-1 bg-[#2c4c7c] hover:bg-[#1e3a5f] text-white py-3 rounded-lg flex items-center justify-center font-medium transition-colors text-sm">
+                  <button className="flex-1 bg-[#2c4c7c] dark:bg-blue-600 hover:bg-[#1e3a5f] dark:hover:bg-blue-700 text-white py-3 rounded-lg flex items-center justify-center font-medium transition-colors text-sm">
                     <FolderPlus className="h-4 w-4 mr-2" /> Add Property
                   </button>
-                  <button className="flex-1 bg-[#2e8b57] hover:bg-[#236b43] text-white py-3 rounded-lg flex items-center justify-center font-medium transition-colors text-sm">
+                  <button className="flex-1 bg-[#2e8b57] dark:bg-green-600 hover:bg-[#236b43] dark:hover:bg-green-700 text-white py-3 rounded-lg flex items-center justify-center font-medium transition-colors text-sm">
                     <Briefcase className="h-4 w-4 mr-2" /> Create Project
                   </button>
-                  <button className="flex-1 bg-[#f08a3d] hover:bg-[#d9772b] text-white py-3 rounded-lg flex items-center justify-center font-medium transition-colors text-sm">
+                  <button className="flex-1 bg-[#f08a3d] dark:bg-orange-500 hover:bg-[#d9772b] dark:hover:bg-orange-600 text-white py-3 rounded-lg flex items-center justify-center font-medium transition-colors text-sm">
                     <UserPlus className="h-4 w-4 mr-2" /> Invite Vendor
                   </button>
                 </div>
@@ -340,7 +340,7 @@ export default function Dashboard({ onNavigateHome }: { onNavigateHome?: () => v
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 transition-colors duration-200">
                   <div className="flex justify-between items-center mb-6">
                     <h2 className="text-lg font-bold text-[#1e3a5f] dark:text-white">Daily Insights</h2>
-                    <MoreHorizontal className="h-5 w-5 text-gray-400" />
+                    <MoreHorizontal className="h-5 w-5 text-gray-400 dark:text-gray-500" />
                   </div>
                   
                   <ul className="space-y-4 mb-6">
@@ -355,7 +355,7 @@ export default function Dashboard({ onNavigateHome }: { onNavigateHome?: () => v
                   </ul>
                   
                   <div className="flex justify-end">
-                    <button className="bg-[#2c4c7c] hover:bg-[#1e3a5f] text-white px-4 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                    <button className="bg-[#2c4c7c] dark:bg-blue-600 hover:bg-[#1e3a5f] dark:hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
                       Read More <ChevronRight className="h-4 w-4 ml-1" />
                     </button>
                   </div>
@@ -365,7 +365,7 @@ export default function Dashboard({ onNavigateHome }: { onNavigateHome?: () => v
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 transition-colors duration-200">
                   <div className="flex justify-between items-center mb-6">
                     <h2 className="text-lg font-bold text-[#1e3a5f] dark:text-white">Recent Notifications</h2>
-                    <MoreHorizontal className="h-5 w-5 text-gray-400" />
+                    <MoreHorizontal className="h-5 w-5 text-gray-400 dark:text-gray-500" />
                   </div>
                   
                   <div className="space-y-4">
@@ -379,7 +379,7 @@ export default function Dashboard({ onNavigateHome }: { onNavigateHome?: () => v
                             <span className="font-medium text-gray-900 dark:text-white">{notification.type}:</span> {notification.message} - <span className="text-gray-400 dark:text-gray-500 text-xs">{new Date(notification.created_at).toLocaleDateString()}</span>
                           </p>
                         </div>
-                        <ChevronRight className="h-4 w-4 text-gray-400" />
+                        <ChevronRight className="h-4 w-4 text-gray-400 dark:text-gray-500" />
                       </div>
                     )) : (
                       <>
@@ -391,7 +391,7 @@ export default function Dashboard({ onNavigateHome }: { onNavigateHome?: () => v
                               <span className="font-medium text-gray-900 dark:text-white">New Lead:</span> Ana Smith - <span className="text-gray-400 dark:text-gray-500 text-xs">10 mins ago</span>
                             </p>
                           </div>
-                          <ChevronRight className="h-4 w-4 text-gray-400" />
+                          <ChevronRight className="h-4 w-4 text-gray-400 dark:text-gray-500" />
                         </div>
 
                         {/* Notification 2 */}
@@ -402,7 +402,7 @@ export default function Dashboard({ onNavigateHome }: { onNavigateHome?: () => v
                               <span className="font-medium text-gray-900 dark:text-white">Payment Received:</span> $5,200 - <span className="text-gray-400 dark:text-gray-500 text-xs">1 hr ago</span>
                             </p>
                           </div>
-                          <ChevronRight className="h-4 w-4 text-gray-400" />
+                          <ChevronRight className="h-4 w-4 text-gray-400 dark:text-gray-500" />
                         </div>
 
                         {/* Notification 3 */}
@@ -415,7 +415,7 @@ export default function Dashboard({ onNavigateHome }: { onNavigateHome?: () => v
                               <span className="font-medium text-gray-900 dark:text-white">Milestone Update</span> Project Milestone Completed - <span className="text-gray-400 dark:text-gray-500 text-xs">2 hrs ago</span>
                             </p>
                           </div>
-                          <ChevronRight className="h-4 w-4 text-gray-400" />
+                          <ChevronRight className="h-4 w-4 text-gray-400 dark:text-gray-500" />
                         </div>
                       </>
                     )}

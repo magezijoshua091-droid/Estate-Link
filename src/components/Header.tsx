@@ -21,7 +21,7 @@ export default function Header({ currentView, setCurrentView, theme, toggleTheme
           {/* Logo */}
           <Link href="/" className="flex items-center cursor-pointer">
             <Building2 className="h-8 w-8 text-blue-600 dark:text-blue-400" />
-            <span className="ml-2 text-xl font-bold text-gray-900 dark:text-white">EstateLink</span>
+            <span className="ml-2 text-xl font-bold text-gray-900 dark:text-white">Architect System</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -54,7 +54,7 @@ export default function Header({ currentView, setCurrentView, theme, toggleTheme
             
             {currentView === 'home' ? (
               <>
-                <button className="hidden md:block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                <button className="hidden md:block bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
                   Get Started
                 </button>
                 <button 

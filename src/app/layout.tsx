@@ -3,7 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "../components/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "EstateLink - PropTech & ConstructionTech",
+  title: "Architect System - PropTech & ConstructionTech",
   description: "The All-In-One Real Estate & Construction Platform",
 };
 

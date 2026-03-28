@@ -24,13 +24,13 @@ export default function LandingPage() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative w-full h-[500px] bg-gray-900 flex items-center justify-center">
+      <section className="relative w-full h-[500px] bg-gray-900 dark:bg-gray-950 flex items-center justify-center">
         {/* Background Image with Overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-60"
           style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80")' }}
         ></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/90 dark:to-gray-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/90 dark:to-gray-950"></div>
         
         <div className="relative z-10 text-center px-4 w-full max-w-5xl mx-auto mt-16">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
@@ -44,25 +44,25 @@ export default function LandingPage() {
           <div className="bg-white dark:bg-gray-800 rounded-lg p-2 flex flex-col md:flex-row shadow-xl max-w-4xl mx-auto">
             <div className="flex-1 flex items-center border-b md:border-b-0 md:border-r border-gray-200 dark:border-gray-700 px-4 py-2">
               <span className="text-gray-700 dark:text-gray-200 font-medium w-full flex justify-between items-center cursor-pointer">
-                Buy <ChevronDown className="h-4 w-4 text-gray-400" />
+                Buy <ChevronDown className="h-4 w-4 text-gray-400 dark:text-gray-500" />
               </span>
             </div>
             <div className="flex-1 flex items-center border-b md:border-b-0 md:border-r border-gray-200 dark:border-gray-700 px-4 py-2">
               <span className="text-gray-700 dark:text-gray-200 font-medium w-full flex justify-between items-center cursor-pointer">
-                Rent Pros <ChevronDown className="h-4 w-4 text-gray-400" />
+                Rent Pros <ChevronDown className="h-4 w-4 text-gray-400 dark:text-gray-500" />
               </span>
             </div>
             <div className="flex-1 flex items-center border-b md:border-b-0 md:border-r border-gray-200 dark:border-gray-700 px-4 py-2">
               <span className="text-gray-700 dark:text-gray-200 font-medium w-full flex justify-between items-center cursor-pointer">
-                Find Pros <ChevronDown className="h-4 w-4 text-gray-400" />
+                Find Pros <ChevronDown className="h-4 w-4 text-gray-400 dark:text-gray-500" />
               </span>
             </div>
             <div className="flex-1 flex items-center px-4 py-2">
               <span className="text-gray-700 dark:text-gray-200 font-medium w-full flex justify-between items-center cursor-pointer">
-                Min. Price - Max. Price <ChevronDown className="h-4 w-4 text-gray-400" />
+                Min. Price - Max. Price <ChevronDown className="h-4 w-4 text-gray-400 dark:text-gray-500" />
               </span>
             </div>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-medium transition-colors mt-2 md:mt-0 md:ml-2">
+            <button className="bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-600 text-white px-8 py-3 rounded-md font-medium transition-colors mt-2 md:mt-0 md:ml-2">
               Search
             </button>
           </div>
@@ -167,7 +167,7 @@ export default function LandingPage() {
                     </div>
                     <span className="text-sm font-medium ml-2 text-gray-700 dark:text-gray-300">4.8</span>
                   </div>
-                  <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors">
+                  <button className="mt-4 w-full bg-blue-600 dark:bg-blue-500 text-white py-2 rounded-md text-sm font-medium hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors">
                     Hire Pro
                   </button>
                 </div>
@@ -192,7 +192,7 @@ export default function LandingPage() {
                     </div>
                     <span className="text-sm font-medium ml-2 text-gray-700 dark:text-gray-300">4.9</span>
                   </div>
-                  <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors">
+                  <button className="mt-4 w-full bg-blue-600 dark:bg-blue-500 text-white py-2 rounded-md text-sm font-medium hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors">
                     Hire Pro
                   </button>
                 </div>
@@ -201,7 +201,7 @@ export default function LandingPage() {
           </div>
 
           <div className="mt-14">
-            <div className="bg-[#1a365d] rounded-t-xl p-4 flex items-center text-white">
+            <div className="bg-[#1a365d] dark:bg-blue-900 rounded-t-xl p-4 flex items-center text-white">
               <div className="bg-white/20 rounded-full p-1 mr-3">
                 <PlusSquare className="h-5 w-5" />
               </div>
@@ -209,7 +209,7 @@ export default function LandingPage() {
             </div>
             <div className="bg-white dark:bg-gray-800 rounded-b-xl p-5 shadow-sm border border-t-0 border-gray-100 dark:border-gray-700">
               <div className="mb-4 flex items-start">
-                <div className="w-6 h-6 rounded bg-blue-500 flex items-center justify-center mr-3 mt-0.5 shrink-0">
+                <div className="w-6 h-6 rounded bg-blue-500 dark:bg-blue-600 flex items-center justify-center mr-3 mt-0.5 shrink-0">
                   <CheckCircle2 className="h-4 w-4 text-white" />
                 </div>
                 <div>
@@ -221,7 +221,7 @@ export default function LandingPage() {
               <hr className="my-4 border-gray-100 dark:border-gray-700" />
               
               <div className="flex items-center">
-                <div className="w-6 h-6 rounded bg-blue-500 flex items-center justify-center mr-3 shrink-0">
+                <div className="w-6 h-6 rounded bg-blue-500 dark:bg-blue-600 flex items-center justify-center mr-3 shrink-0">
                   <TrendingUp className="h-4 w-4 text-white" />
                 </div>
                 <p className="text-sm font-medium text-gray-900 dark:text-white flex-1">New Listings This Week</p>
@@ -234,18 +234,18 @@ export default function LandingPage() {
         {/* Trust Section */}
         <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col md:flex-row items-center justify-between mb-8 divide-y md:divide-y-0 md:divide-x divide-gray-100 dark:divide-gray-700">
           <div className="flex items-center justify-center space-x-3 px-6 py-3 md:py-0 w-full md:w-auto">
-            <Briefcase className="h-5 w-5 text-blue-600" />
+            <Briefcase className="h-5 w-5 text-blue-600 dark:text-blue-400" />
             <p className="text-sm text-gray-700 dark:text-gray-300"><span className="font-semibold text-gray-900 dark:text-white">Get Financing:</span> Calculate Loans & Mortgages</p>
           </div>
           <div className="flex items-center justify-center space-x-3 px-6 py-3 md:py-0 w-full md:w-auto">
-            <Users className="h-5 w-5 text-blue-600" />
+            <Users className="h-5 w-5 text-blue-600 dark:text-blue-400" />
             <p className="text-sm font-semibold text-gray-900 dark:text-white">Trusted by Thousands of Users</p>
           </div>
           <div className="flex items-center justify-center space-x-2 px-6 py-3 md:py-0 w-full md:w-auto">
             <div className="flex text-yellow-400">
               <Star className="h-4 w-4 fill-current" /><Star className="h-4 w-4 fill-current" /><Star className="h-4 w-4 fill-current" /><Star className="h-4 w-4 fill-current" /><Star className="h-4 w-4 fill-current" />
             </div>
-            <div className="flex space-x-1 ml-2 text-gray-400">
+            <div className="flex space-x-1 ml-2 text-gray-400 dark:text-gray-500">
               <div className="w-4 h-4 bg-gray-200 dark:bg-gray-600 rounded-full"></div>
               <div className="w-4 h-4 bg-gray-200 dark:bg-gray-600 rounded-full"></div>
               <div className="w-4 h-4 bg-gray-200 dark:bg-gray-600 rounded-full"></div>
@@ -262,9 +262,9 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="flex items-center space-x-8">
-            <span className="text-2xl font-bold text-blue-600">Zillow</span>
-            <span className="text-2xl font-bold text-orange-500 flex items-center"><Briefcase className="h-6 w-6 mr-1"/> Procore</span>
-            <span className="text-2xl font-bold text-green-600 flex items-center"><Home className="h-6 w-6 mr-1"/> houzz</span>
+            <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">Zillow</span>
+            <span className="text-2xl font-bold text-orange-500 dark:text-orange-400 flex items-center"><Briefcase className="h-6 w-6 mr-1"/> Procore</span>
+            <span className="text-2xl font-bold text-green-600 dark:text-green-500 flex items-center"><Home className="h-6 w-6 mr-1"/> houzz</span>
           </div>
         </div>
 

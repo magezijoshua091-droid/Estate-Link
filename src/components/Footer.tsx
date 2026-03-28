@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center">
-              <span className="text-xl font-bold text-gray-900 dark:text-white">EstateLink</span>
+              <span className="text-xl font-bold text-gray-900 dark:text-white">Architect System</span>
             </div>
             <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
               The All-In-One Real Estate & Construction Platform. Find Properties, Hire Pros, Manage Projects & Finance with Confidence.
